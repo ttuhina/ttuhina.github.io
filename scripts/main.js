@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -8,6 +9,28 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Achievements Carousel
+    const carousel = document.querySelector('.carousel-container');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        currentSlide = index % slides.length;
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+    
+    nextBtn.addEventListener('click', nextSlide);
+    
+    // Slow down auto-slide to 6 seconds
+    setInterval(nextSlide, 5500);
 
     // Parallax effect for the hero section
     window.addEventListener('scroll', () => {
@@ -35,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroText = "Computer Science and Engineering Hons. (IoT and IS)";
     const heroElement = document.querySelector('#typewriter');
     let i = 0;
+
     const typeWriter = () => {
         if (i < heroText.length) {
             heroElement.innerHTML += heroText.charAt(i);
