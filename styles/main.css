@@ -1,9 +1,9 @@
 :root {
-    --bg-color: #0A0908;
-    --text-color: #EFF9F0;
-    --accent-color-1: #9E0031;
-    --accent-color-2: #8E0045;
-    --accent-color-3: #24ae93;
+    --bg-color: #0c102b;
+    --text-color: white;
+    --accent-color-1: #e70dbf;
+    --accent-color-2: #e807bf;
+    --accent-color-3: #0b409a;
     --light-accent-1: rgba(158, 0, 49, 0.1);
     --light-accent-3: rgba(36, 174, 147, 0.1);
 }
@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--bg-color);
