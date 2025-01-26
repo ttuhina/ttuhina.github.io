@@ -20,7 +20,119 @@ body {
     line-height: 1.6;
     background-color: var(--bg-color);
 }
+#hero {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+.hero-text h1 {
+    font-size: 2.5rem; /* Bigger intro text */
+}
+.connect-box .cursive {
+    font-size: 3.5rem; /* Larger "Connect With Me" text */
+    margin-bottom: 0.0025px; /* More space below the title */
+}
 
+.connect-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.social-links img {
+    width: 60px; /* Bigger logos */
+    height: 60px;
+}
+
+#typewriter {
+    font-size: 2.5rem;
+    min-height: 2.5em;
+    color: var(--accent-color-2);
+}
+.hero-content {
+    display: flex;
+    width: 100%;
+}
+
+.hero-text {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-sidebar {
+    width: 70%; /* Slightly adjusted width */
+    padding-left: 30px; /* More space between hero text and sidebar */
+}
+
+.hero-connect-content {
+    display: flex;
+    align-items: center;
+    gap: 35px; /* Increased gap between picture and links */
+    width: 100%;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.connect-box {
+    background-color: var(--light-accent-3);
+    border-radius: 10px;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 3px var(--accent-color-3);
+    transition: all 0.3s ease;
+}
+
+.connect-box:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 0 0 5px var(--accent-color-1);
+    transform: translateY(-5px);
+}
+
+.btn {
+    width: 30%; /* Span across left screen */
+    text-align: center;
+}
+
+.profile-pic {
+    margin: 10px 0; /* Closer to Connect with Me */
+}
+
+.profile-pic img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.social-links-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* More space between social links */
+    height: 250px;
+    justify-content: center;
+}
+
+.social-links-vertical img {
+    width: 90px; /* Slightly larger icons */
+    height: 90px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.social-links-vertical a:hover img {
+    transform: scale(1.1);
+}
 header {
     position: fixed;
     top: 0;
@@ -85,8 +197,15 @@ h1, h2 {
 
 .cursive {
     font-family: 'Dancing Script', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--accent-color-2);
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
 }
 
 .highlight {
@@ -416,4 +535,19 @@ footer {
         width: 100%;
         max-height: 50vh;
     }
+}
+.github-stats-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.github-stats-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
 }

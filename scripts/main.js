@@ -55,19 +55,46 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Typewriter effect for the hero section
-    const heroText = "Computer Science and Engineering Hons. (IoT and IS)";
-    const heroElement = document.querySelector('#typewriter');
-    let i = 0;
+    // Typewriter effect for the hero section
+const heroTexts = [
+    "Computer Science and Engineering",
+    "IoT and Embedded Systems enthusiast",
+    "Aspiring MERN Developer",
+    "AI & ML enthusiast"
+];
+const heroElement = document.querySelector('#typewriter');
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-    const typeWriter = () => {
-        if (i < heroText.length) {
-            heroElement.innerHTML += heroText.charAt(i);
-            i++;
+function typeWriter() {
+    const currentText = heroTexts[textIndex];
+    
+    if (!isDeleting) {
+        heroElement.innerHTML = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        
+        if (charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, 2000);
+        } else {
             setTimeout(typeWriter, 50);
         }
-    };
-    typeWriter();
+    } else {
+        heroElement.innerHTML = currentText.substring(0, charIndex);
+        charIndex--;
+        
+        if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % heroTexts.length;
+            setTimeout(typeWriter, 500);
+        } else {
+            setTimeout(typeWriter, 30);
+        }
+    }
+}
 
+typeWriter();
     // Hamburger menu toggle
     const hamburger = document.querySelector('.hamburger');
     const menu = document.querySelector('.menu');
