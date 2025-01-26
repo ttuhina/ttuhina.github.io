@@ -15,7 +15,7 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--bg-color);
@@ -550,4 +550,133 @@ footer {
     object-fit: contain;
     max-width: 100%;
     max-height: 100%;
+}
+@media screen and (max-width: 768px) {
+    .experience-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .experience-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: 300px;
+    }
+
+    .offer-letter-container {
+        width: 100%;
+        height: 250px;
+    }
+
+    .experience-details {
+        flex: 1;
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    .experience-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .experience-details .company {
+        font-size: 1rem;
+    }
+}
+
+/* Base styles for larger screens */
+.experience-content {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-accent-3);
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 300px;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.experience-image {
+    flex: 0 0 auto;
+    max-width: 250px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.experience-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    width: 70%;
+}
+
+.offer-letter-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    cursor: pointer;
+}
+
+.offer-letter {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.offer-letter-hint {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.offer-letter-container:hover .offer-letter-hint {
+    opacity: 1;
+}
+.experience-details h3 {
+    color: var(--accent-color-1); /* Restoring original title color */
+    margin-bottom: 10px;
+    font-size:30px;
+}
+
+.experience-details .company {
+    color: var(--accent-color-3); /* Restoring original subtitle color */
+    margin-bottom: 15px;
+    font-size:20px;
+
+}
+.offer-letter-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.offer-letter-modal.active {
+    display: flex; /* Show the modal when active */
+}
+
+.offer-letter-modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }

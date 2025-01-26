@@ -112,3 +112,28 @@ typeWriter();
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const offerLetterContainers = document.querySelectorAll('.offer-letter-container');
+    const modal = document.querySelector('.offer-letter-modal');
+    const modalImage = document.querySelector('.offer-letter-modal-content');
+
+    offerLetterContainers.forEach(container => {
+        // Add click event to both the container and the image
+        [container, container.querySelector('.offer-letter')].forEach(element => {
+            element.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevent event bubbling
+                const offerLetterImg = container.querySelector('.offer-letter');
+                modalImage.src = offerLetterImg.src;
+                modal.classList.add('active');
+            });
+        });
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+});
