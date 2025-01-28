@@ -3,9 +3,15 @@
     --text-color: white;
     --accent-color-1: #dc07b5;
     --accent-color-2: #e807bf;
-    --accent-color-3: #0386ba;
+    --accent-color-5:#40E0D0; /* Restoring original subtitle color */
+
+    --accent-color-3: #1e2a2e;
     --light-accent-1: rgba(158, 0, 49, 0.1);
     --light-accent-3: rgba(36, 174, 147, 0.1);
+}
+.name-highlight {
+    color: #40E0D0; /* Turquoise color */
+    font-family: 'Dancing Script', cursive; /* Keeping the cursive font */
 }
 
 * {
@@ -27,6 +33,7 @@ body {
 }
 .hero-text h1 {
     font-size: 2.5rem; /* Bigger intro text */
+    font-family: 'Dancing Script', cursive;
 }
 .connect-box .cursive {
     font-size: 3.5rem; /* Larger "Connect With Me" text */
@@ -314,9 +321,6 @@ h1, h2 {
     font-size: 1.2rem;
     text-align: center;
     padding: 15px 10px;
-    background-color: var(--light-accent-1);
-    border: 2px solid var(--accent-color-3);
-    border-radius: 8px;
     height: 60px; /* Fixed height for all titles */
     display: flex;
     align-items: center;
@@ -331,7 +335,7 @@ h1, h2 {
 .skill-item {
     display: flex;
     align-items: center;
-    padding: 8px;
+    padding: 3px;
     margin-bottom: 15px;
 }
 
@@ -740,7 +744,7 @@ footer {
 }
 
 .experience-details .company {
-    color: var(--accent-color-3); /* Restoring original subtitle color */
+    color: var(--accent-color-5); /* Restoring original subtitle color */
     margin-bottom: 15px;
     font-size:20px;
 
@@ -767,4 +771,52 @@ footer {
     max-height: 90%;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.education-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.education-table th,
+.education-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--accent-color-3);
+}
+
+.education-table th {
+    background-color: var(--light-accent-1);
+    color: var(--accent-color-1);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.education-table tr {
+    transition: background-color 0.3s ease;
+}
+
+.education-table tr:hover {
+    background-color: var(--light-accent-1);
+}
+
+.education-table td:first-child {
+    font-weight: bold;
+    color: var(--accent-color-2);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .education-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .education-table th,
+    .education-table td {
+        padding: 10px;
+    }
 }
