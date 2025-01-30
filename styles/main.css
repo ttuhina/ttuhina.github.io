@@ -9,6 +9,7 @@
     --light-accent-1: rgba(158, 0, 49, 0.1);
     --light-accent-3: rgba(36, 174, 147, 0.1);
 }
+
 .name-highlight {
     color: #40E0D0; /* Turquoise color */
     font-family: 'Dancing Script', cursive; /* Keeping the cursive font */
@@ -819,4 +820,266 @@ footer {
     .education-table td {
         padding: 10px;
     }
+}
+/* Mobile-first responsive styles */
+@media screen and (max-width: 768px) {
+    /* Hero Section */
+    .hero-content {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.6rem;
+        width: 100%;
+        white-space: normal;
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    #typewriter {
+        font-size: 1.4rem;
+        min-height: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        width: 60%;
+        margin: 10px auto 20px;
+    }
+
+    .hero-sidebar {
+        width: 100%;
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .connect-box {
+        padding: 15px;
+        width: 100%;
+        max-height: 500px;
+    }
+
+    .hero-connect-content {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .profile-pic {
+        margin-bottom: 10px;
+    }
+
+    .profile-pic img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .social-links-vertical {
+        flex-direction: row;
+        height: auto;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .social-links-vertical img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Achievements Section */
+    .carousel-slide {
+        flex-direction: column;
+        max-height: 500px;
+    }
+
+    .carousel-slide img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .github-stats-image {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .github-stats-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .achievement-description {
+        width: 100%;
+        padding: 12px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .achievement-description h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+
+    .achievement-description p {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* Experience Section */
+    .experience-content {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .experience-image {
+        width: 100%;
+        max-width: none;
+    }
+
+    .offer-letter-container {
+        height: 180px;
+        margin-bottom: 12px;
+    }
+
+    .experience-details {
+        width: 100%;
+        padding: 0;
+    }
+
+    .experience-details h3 {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .experience-details .company {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .experience-details ul {
+        padding-left: 15px;
+    }
+
+    .experience-details li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .skills-category {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .skills-category h3 {
+        font-size: 1.1rem;
+        padding: 8px;
+        margin-bottom: 10px;
+        height: auto;
+        white-space: normal;
+        text-align: center;
+        background-color: var(--light-accent-3);
+    }
+
+    .skill-item {
+        padding: 5px 0;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+    }
+
+    .skill-item img {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+    }
+
+    .skill-item span {
+        font-size: 0.95rem;
+        white-space: normal;
+    }
+
+    /* General Responsive Adjustments */
+    .cursive {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .sheer-box {
+        padding: 12px;
+        margin: 12px 0;
+    }
+
+    section {
+        padding: 30px 12px;
+    }
+
+    /* Navigation adjustments */
+    .menu li {
+        margin: 1.5rem 0;
+    }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 375px) {
+    .hero-text h1 {
+        font-size: 1.4rem;
+    }
+
+    #typewriter {
+        font-size: 1.2rem;
+    }
+
+    .profile-pic img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .social-links-vertical img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn {
+        width: 80%;
+    }
+
+    .experience-details h3 {
+        font-size: 1.2rem;
+    }
+
+    .achievement-description h3 {
+        font-size: 1.1rem;
+    }
+
+    .skills-category h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure smooth transitions */
+.hero-content,
+.hero-text,
+.connect-box,
+.profile-pic img,
+.social-links-vertical,
+.carousel-slide,
+.achievement-description,
+.experience-content,
+.skills-grid {
+    transition: all 0.3s ease-in-out;
 }
