@@ -59,8 +59,9 @@ document.addEventListener('DOMContentLoaded', () => {
 const heroTexts = [
     "Computer Science and Engineering",
     "IoT and Embedded Systems enthusiast",
-    "Aspiring MERN Developer",
-    "AI & ML enthusiast"
+    "MERN Developer",
+    "ML Researcher",
+    "Patent Holder 💡"
 ];
 const heroElement = document.querySelector('#typewriter');
 let textIndex = 0;
