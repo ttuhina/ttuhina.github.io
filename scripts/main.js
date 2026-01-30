@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Typewriter effect for the hero section
     // Typewriter effect for the hero section
 const heroTexts = [
-    "Computer Science and Engineering",
+    "Computer Science and Engineering student",
     "IoT and Embedded Systems enthusiast",
-    "MERN Developer",
+    "3x Dean's List for academic excellence",
     "ML Researcher",
     "Patent Holder 💡"
 ];
